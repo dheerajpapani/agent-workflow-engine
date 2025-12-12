@@ -5,31 +5,28 @@ It supports dynamic workflow graphs, intelligent node execution, state persisten
 
 A minimal React UI is included to visualize workflow execution, though the **backend workflow system is the main focus**.
 
-### 🔗 **Live Demo**
-
-➡ [https://agent-workflow-engine.onrender.com](https://agent-workflow-engine.onrender.com)
+#### 🔗 **Live Demo** : [https://agent-workflow-engine.onrender.com](https://agent-workflow-engine.onrender.com)
 
 ---
 
-# 📘 Table of Contents
-
-* [Overview](#overview)
-* [Key Features](#key-features)
-* [Architecture](#architecture)
-* [Architecture Diagrams](#architecture-diagrams)
-* [How the Workflow Engine Works](#how-the-workflow-engine-works)
-* [Developer Setup Guide](#developer-setup-guide)
-* [API Reference](#api-reference)
-* [Swagger / OpenAPI Usage](#swagger--openapi-usage)
-* [WebSocket Protocol](#websocket-protocol)
-* [Testing](#testing)
-* [Deployment (Render)](#deployment-render)
-* [Future Enhancements](#future-enhancements)
-* [Contributor](#contributor)
+## 📘 Table of Contents
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [Architecture](#architecture)
+- [Architecture Diagrams](#architecture-diagrams)
+- [How the Workflow Engine Works](#how-the-workflow-engine-works)
+- [Developer Setup Guide](#developer-setup-guide)
+- [API Reference](#api-reference)
+- [Swagger / OpenAPI Usage](#swagger--openapi-usage)
+- [WebSocket Protocol](#websocket-protocol)
+- [Testing](#testing)
+- [Deployment (Render)](#deployment-render)
+- [Future Enhancements](#future-enhancements)
+- [Contributor](#contributor)
 
 ---
 
-# 🌐 Overview
+## 🌐 Overview
 
 The **Agent Workflow Engine** executes workflows represented as directed graphs.
 A workflow is composed of:
@@ -52,7 +49,7 @@ The included example workflow is **Code Review Agent**.
 
 ---
 
-# ✨ Key Features
+## ✨ Key Features
 
 ### 🔧 Workflow Execution Engine
 
@@ -92,7 +89,7 @@ React UI for interactive execution monitoring.
 
 ---
 
-# 🧱 Architecture
+## 🧱 Architecture
 
 ```
 app/
@@ -122,9 +119,9 @@ app/
 
 ---
 
-# 🧩 Architecture Diagrams
+## 🧩 Architecture Diagrams
 
-## 🔹 **High-Level System Diagram**
+###  **High-Level System Diagram**
 
 ```mermaid
 flowchart LR
@@ -137,7 +134,7 @@ flowchart LR
 
 ---
 
-## 🔹 **Workflow Execution Flow**
+###  **Workflow Execution Flow**
 
 ```mermaid
 flowchart TD
@@ -157,7 +154,7 @@ flowchart TD
 
 ---
 
-## 🔹 **Graph Structure**
+### **Graph Structure**
 
 ```mermaid
 graph TD
@@ -169,7 +166,7 @@ graph TD
 
 ---
 
-# 🧪 How the Workflow Engine Works
+## 🧪 How the Workflow Engine Works
 
 1. **Client sends graph_id + initial_state**
 2. **Runner loads graph + creates WorkflowState**
@@ -192,7 +189,7 @@ Supports:
 
 ---
 
-# 🧑‍💻 Developer Setup Guide
+## 🧑‍💻 Developer Setup Guide
 
 ### 1️⃣ Clone repo
 
@@ -232,15 +229,15 @@ The backend serves the built frontend automatically.
 
 ---
 
-# 📡 API Reference
+## 📡 API Reference
 
-## ▶ **Create Code Review Workflow**
+### ▶ **Create Code Review Workflow**
 
 ```
 POST /graph/create/code-review
 ```
 
-## ▶ **Run Workflow**
+### ▶ **Run Workflow**
 
 ```
 POST /graph/run
@@ -255,26 +252,26 @@ Body:
 }
 ```
 
-## ▶ **Get State**
+### ▶ **Get State**
 
 ```
 GET /graph/state/<run_id>
 ```
 
-## ▶ **Pause / Resume**
+### ▶ **Pause / Resume**
 
 ```
 POST /graph/pause/<run_id>
 POST /graph/resume/<run_id>
 ```
 
-## ▶ **List Graphs**
+### ▶ **List Graphs**
 
 ```
 GET /graph/list
 ```
 
-## ▶ **Delete Graph**
+### ▶ **Delete Graph**
 
 ```
 DELETE /graph/<graph_id>
@@ -282,7 +279,7 @@ DELETE /graph/<graph_id>
 
 ---
 
-# 📘 Swagger / OpenAPI Usage
+## 📘 Swagger / OpenAPI Usage
 
 The backend automatically exposes:
 
@@ -302,7 +299,7 @@ You can test endpoints directly using Swagger forms.
 
 ---
 
-# 🔌 WebSocket Protocol
+## 🔌 WebSocket Protocol
 
 ### Connect
 
@@ -326,7 +323,7 @@ wss://agent-workflow-engine.onrender.com/ws/<run_id>
 
 ---
 
-# 🧪 Testing
+## 🧪 Testing
 
 Run all tests:
 
@@ -342,7 +339,7 @@ Includes:
 
 ---
 
-# ☁ Deployment (Render)
+## ☁ Deployment (Render)
 
 Render uses `render.yaml` to:
 
@@ -362,7 +359,7 @@ uvicorn app.main:app --host 0.0.0.0 --port $PORT
 
 ---
 
-# 🔮 Future Enhancements
+## 🔮 Future Enhancements
 
 * Parallel workflow execution
 * Built-in retry scheduling
@@ -373,17 +370,19 @@ uvicorn app.main:app --host 0.0.0.0 --port $PORT
 
 ---
 
-# 👤 Contributor
+## 👤 Contributor
 
 **Dheeraj Papani**
 AI Engineer | Backend & Systems Development
 
-[Email](mailto:dheerajpapani@gmail.com) | [LinkedIn](https://www.linkedin.com/in/dheeraj-papani-507693274/) | [GitHub](https://github.com/dheerajpapani)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/in/dheeraj-papani-507693274/)
+[![GitHub](https://img.shields.io/badge/GitHub-black?logo=github)](https://github.com/dheerajpapani)
+[![Gmail](https://img.shields.io/badge/Email-red?logo=gmail)](https://mail.google.com/mail/?view=cm&fs=1&to=dheerajpapani@gmail.com)
 
 
 ---
 
-# ⭐ Like this project
+## ⭐ Like this project
 
 Star the repository to support future improvements!
 
