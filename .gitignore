@@ -38,3 +38,9 @@ frontend/.cache/
 # pytest cache
 .pytest_cache/
 
+
+# Python virtual env
+venv/
+.venv/
+env/
+
