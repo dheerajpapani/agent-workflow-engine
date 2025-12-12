@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: agent-workflow-engine
+    env: python
+    region: singapore
+    plan: free
+    buildCommand: |
+      pip install -r requirements.txt
+      cd frontend
+      npm install
+      npm run build
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    autoDeploy: true
