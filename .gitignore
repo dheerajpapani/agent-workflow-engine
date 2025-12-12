@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+env/
+.venv/
+pip-wheel-metadata/
+*.egg-info/
+dist/
+build/
+
+# IDEs / editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Node / frontend
+node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.cache/
+
+# Logs
+*.log
+
+# Secrets
+*.pem
+*.key
+
+# pytest cache
+.pytest_cache/
+
